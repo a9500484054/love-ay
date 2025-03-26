@@ -211,32 +211,30 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Инициализация всех слайдеров
-document.querySelectorAll('.hero-swiper').forEach((swiperElement, index) => {
-    new Swiper(swiperElement, {
+// Инициализация Swiper для всех блоков Hero
+const heroSwipers = document.querySelectorAll('.hero-swiper').forEach(swiper => {
+    new Swiper(swiper, {
         effect: 'fade',
         speed: 1000,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
         },
-        loop: true, // Добавляем бесконечное перелистывание
         pagination: {
-            el: swiperElement.querySelector('.swiper-pagination'),
+            el: swiper.querySelector('.swiper-pagination'),
             clickable: true,
         },
         navigation: {
-            nextEl: swiperElement.querySelector('.swiper-button-next'),
-            prevEl: swiperElement.querySelector('.swiper-button-prev'),
+            nextEl: swiper.querySelector('.swiper-button-next'),
+            prevEl: swiper.querySelector('.swiper-button-prev'),
         },
     });
 });
 
-// Инициализация галереи
 const gallerySwiper = new Swiper('.gallery-swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: true, // Добавляем бесконечное перелистывание
+    loop: true,
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -253,11 +251,44 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
         640: {
             slidesPerView: 2,
         },
-        768: {
+        1024: {
             slidesPerView: 3,
         },
-        1024: {
-            slidesPerView: 4,
-        },
     }
-}); 
+});
+
+// Управление лоадером
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Создаем промис для загрузки всех изображений
+//     const imagePromises = Array.from(document.images).map(img => {
+//         if (img.complete) return Promise.resolve();
+//         return new Promise(resolve => {
+//             img.onload = resolve;
+//             img.onerror = resolve;
+//         });
+//     });
+
+//     // Ждем загрузки всех изображений и аудио
+//     Promise.all([
+//         ...imagePromises,
+//         new Promise(resolve => {
+//             const audio = document.getElementById('love-song');
+//             if (audio.readyState >= 3) {
+//                 resolve();
+//             } else {
+//                 audio.addEventListener('canplaythrough', resolve);
+//             }
+//         })
+//     ]).then(() => {
+//         // Добавляем небольшую задержку для плавности
+//         setTimeout(() => {
+//             const loader = document.querySelector('.loader-wrapper');
+//             loader.classList.add('fade-out');
+            
+//             // Удаляем лоадер после завершения анимации
+//             setTimeout(() => {
+//                 loader.remove();
+//             }, 500);
+//         }, 1000);
+//     });
+// }); 
