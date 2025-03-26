@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Валентинка</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <div class="hearts-container"></div>
+    <div class="snowflakes-container"></div>
+    
+    <div class="fixed-timer">
+        <div style="margin-bottom: 10px; text-align: center;">До нашей свадьбы осталось</div>
+        <div class="timer-container">
+            <div class="timer-block">
+                <span id="days">00</span>
+                <span class="label">Дней</span>
+            </div>
+            <div class="timer-block">
+                <span id="hours">00</span>
+                <span class="label">Часов</span>
+            </div>
+            <div class="timer-block">
+                <span id="minutes">00</span>
+                <span class="label">Минут</span>
+            </div>
+            <div class="timer-block">
+                <span id="seconds">00</span>
+                <span class="label">Секунд</span>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <h2>Моя Любимая</h2>
+        <h1>Ульяночка</h1>
+        <div>
+            <style>
+                .love-letter {
+                    background: rgba(255, 255, 255, 0.9);
+                    padding: 2rem;
+                    border-radius: 20px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    margin: 2rem auto;
+                    max-width: 1280px;
+                    font-family: var(--font-main);
+                    line-height: 1.8;
+                    position: relative;
+                    border: 2px solid rgba(255, 107, 107, 0.3);
+                }
+
+                .love-letter::before {
+                    content: '❤️';
+                    position: absolute;
+                    top: -15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 2rem;
+                }
+
+                .love-paragraph {
+                    margin-bottom: 1.5rem;
+                    text-align: justify;
+                    color: var(--text-color);
+                    font-size: 1.1rem;
+                    padding: 0 1rem;
+                }
+
+                .highlight {
+                    color: var(--primary-color);
+                    font-weight: 500;
+                    text-align: center;
+                }
+
+                .special-text {
+                    display: block;
+                    margin-top: 1rem;
+                    font-family: var(--font-romantic);
+                    font-size: 1.3rem;
+                    color: var(--primary-color);
+                    text-align: center;
+                    font-weight: bold;
+                }
+            </style>
+            <div class="love-letter">
+                <p class="love-paragraph">
+                    Сегодня особенный день — ровно два года назад наши судьбы переплелись, и с тех пор каждый миг, проведенный вместе, стал незабываемым. Ты делаешь меня по-настоящему счастливым, и я безмерно благодарен судьбе за то, что ты рядом.
+                </p>
+
+                <p class="love-paragraph">
+                    Ты — мой лучший друг, моя космос, мой океан и моя любовь. Вместе мы преодолеваем любые трудности и наслаждаемся каждым мгновением. Спасибо тебе за поддержку, веру и безграничную любовь.
+                </p>
+
+                <p class="love-paragraph">
+                    Я создал для нас небольшой сайт, где собраны наши самые дорогие моменты. Там есть таймер, который отсчитывает время до нашего особенного дня — летом нас ждет свадьба. Теперь мы всегда можем узнать, сколько времени осталось до этого важного события, и я с нетерпением жду его наступления.
+                </p>
+
+                <p class="love-paragraph">
+                    <span class="special-text">Я люблю тебя больше всего на свете и обещаю, что буду рядом всегда, поддерживать и заботиться о тебе.</span>
+                    <div class="highlight">А теперь включай музыку (кнопка ниже) и наслаждайся просмотрам</div>
+                </p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+
+        <section class="hero">
+            <!-- Первый блок -->
+            <div class="hero-block">
+                <div class="swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/3WextoBMvVM.jpg" alt="Наше фото">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/GWDJ18NLE_E.jpg" alt="Наше фото">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/dgtyK1PBvIQ.jpg" alt="Наше фото">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="message">
+                    <h2>Моё послание тебе</h2>
+                    <p class="love-message">
+                        Дорогая моя, каждый день с тобой - это подарок судьбы. 
+                        Ты делаешь мой мир ярче и прекраснее. 
+                        Спасибо тебе за всё, что ты даришь мне каждый день.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Второй блок -->
+            <div class="hero-block reverse">
+    
+                <div class="swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/eVzAKwSc29g.jpg" alt="Наше фото">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/tnpYIrT1UDg.jpg" alt="Наше фото">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/5PiZEngbBJ4.jpg" alt="Наше фото">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="message">
+                    <h2>Наша любовь</h2>
+                    <p class="love-message">
+                        С тобой каждый момент становится особенным. 
+                        Ты - мое вдохновение, моя радость, мое счастье. 
+                        Ты делаешь мою жизнь полной смысла и красоты.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Третий блок -->
+            <div class="hero-block">
+                <div class="swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/XM76TxE8VXw.jpg" alt="Наше фото">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/oXq2E7o1g3s.jpg" alt="Наше фото">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/b-ogy2sd7Bw.jpg" alt="Наше фото">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="message">
+                    <h2>Наше будущее</h2>
+                    <p class="love-message">
+                        Вместе с тобой я хочу прожить всю жизнь. 
+                        Создать семью, построить дом, вырастить детей. 
+                        Ты - мое настоящее и будущее, моя любовь.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="music-player">
+            <h3>Наша песня</h3>
+            <audio id="love-song" controls>
+                <source src="music/Для Ульяны.mp3" type="audio/mpeg">
+                <!-- <source src="music/OGEL_-_DURAKAM_VEZJOT_72787681.mp3" type="audio/mpeg"> -->
+                Ваш браузер не поддерживает аудио элемент.
+            </audio>
+        </section>
+
+        <section class="gallery">
+            <h3>Наши моменты</h3>
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/b-ogy2sd7Bw.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/5r9S74Rf9LI.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/hwgaJIyg-Q8.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/SYw-WfliaRg.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cbJ2Dd9YFV0.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/TpLMkp5Pkx8.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/nur6c81AcJw.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/boydwkqfIu4.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/7oaQNth3QJA.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/GJn4tINRdHQ.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/3BCTaTtzKBM.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/EGAiGk9b2Jk.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/iLABytNyob4.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Qim2KOXcf-4.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/XQnxhQzbirY.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/w3XaPB2cTkw.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/_TL7V38SRlQ.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/ajNXzG7uDow.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/-wBAsIBhUkU.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/5OTkjLwO7vU.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/bicSl_nPJiM.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/gW3krQF7y3Q.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/UAJGflxK-74.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/0089hPImIQw.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/dZ7_BLYUmoM.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/e6j5rx5Uw4A.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/DexUZXKP1FI.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/uRC3snrkPaQ.jpg" alt="Наше фото">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/pR-PkmIiNe4.jpg" alt="Наше фото">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section class="interactive">
+            <button id="kiss-button" class="kiss-button">Отправить Сердце ❤️</button>
+            <div class="comments-section">
+                <h3>Оставь мне сообщение</h3>
+                <textarea id="comment-input" placeholder="Напиши мне что-нибудь..."></textarea>
+                <button id="send-comment">Отправить</button>
+                <div id="comments-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>С любовью ❤️ Котик </p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

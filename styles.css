@@ -1,0 +1,576 @@
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #ffd93d;
+    --text-color: #4a4a4a;
+    --background-color: #fff5f5;
+    --font-romantic: 'Dancing Script', cursive;
+    --font-main: 'Montserrat', sans-serif;
+    --gradient-1: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    --gradient-2: linear-gradient(135deg, #fad0c4 0%, #ff9a9e 100%);
+    --gradient-3: linear-gradient(135deg, #ffd1d1 0%, #ff9a9e 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--gradient-1);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 0.5;
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding: 3rem 2rem;
+    /* background: var(--gradient-2); */
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.2)"/></svg>');
+    opacity: 0.3;
+}
+
+h1, h2 {
+    font-family: var(--font-romantic);
+    font-size: 3.5rem;
+    color: var(--background-color);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.countdown {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.hero-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.hero-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-block:hover::before {
+    opacity: 0.1;
+}
+
+.hero-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.hero-swiper {
+    flex: 1;
+    max-width: 500px;
+    height: 400px;
+}
+
+.message {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.message h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.love-message {
+    font-family: var(--font-romantic);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 1rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.music-player {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255,255,255,0.8);
+    margin: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.music-player h3 {
+    font-family: var(--font-romantic);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    padding: 2rem;
+    text-align: center;
+    background: rgba(255,255,255,0.5);
+    margin: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.gallery h3 {
+    font-family: var(--font-romantic);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.interactive {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255,255,255,0.8);
+    margin: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.kiss-button {
+    background: var(--gradient-1);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.kiss-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255,107,107,0.4);
+}
+
+.comments-section {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+#comment-input {
+    width: 100%;
+    height: 100px;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    resize: none;
+    background: rgba(255,255,255,0.9);
+    transition: all 0.3s ease;
+}
+
+#comment-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255,107,107,0.3);
+}
+
+#send-comment {
+    background: var(--gradient-2);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+#send-comment:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--gradient-2);
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.2)"/></svg>');
+    opacity: 0.3;
+}
+
+footer p {
+    font-family: var(--font-romantic);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Анимации */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.hearts-container, .snowflakes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Стили для Swiper */
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    aspect-ratio: 3/4;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.1);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-color) !important;
+    background: rgba(255,255,255,0.8);
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px !important;
+}
+
+.swiper-pagination-bullet {
+    background: var(--primary-color) !important;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Обновляем медиа-запросы */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .hero-block {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .hero-block.reverse {
+        flex-direction: column;
+    }
+
+    .hero-swiper {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .message {
+        padding: 1rem;
+    }
+
+    .love-message {
+        font-size: 1.2rem;
+    }
+
+    .swiper-slide {
+        aspect-ratio: 4/3;
+    }
+}
+
+/* Стили для фиксированного таймера */
+.fixed-timer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.fixed-timer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.timer-container {
+    display: flex;
+    gap: 15px;
+}
+
+.timer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+}
+
+.timer-block span:first-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: var(--font-romantic);
+    line-height: 1;
+}
+
+.timer-block .label {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .fixed-timer {
+        position: relative;
+        top: 0;
+        right: 0;
+        max-width: 322px;
+        margin: 0 auto;
+        padding: 10px 15px;
+    }
+
+    .timer-block {
+        min-width: 45px;
+    }
+
+    .timer-block span:first-child {
+        font-size: 1.8rem;
+    }
+
+    .timer-block .label {
+        font-size: 0.7rem;
+    }
+}
+
+/* Анимация изменения значений таймера */
+.timer-block span:first-child.changed {
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+        color: var(--secondary-color);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Анимация сердечек */
+.heart {
+    position: fixed;
+    top: 100vh;
+    font-size: 20px;
+    user-select: none;
+    cursor: default;
+    z-index: 9999;
+    animation: floatUp 4s ease-in-out forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Стили для кнопки воспроизведения музыки */
+.play-music-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--gradient-1);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    z-index: 1000;
+    animation: float 2s ease-in-out infinite;
+    border: 4px solid #fff; 
+}
+
+.play-music-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255,107,107,0.4);
+}
+
+/* Стили для комментариев */
+.comment {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.comment:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.comment p {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.comment small {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.delete-comment {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.comment:hover .delete-comment {
+    opacity: 1;
+}
+
+.delete-comment:hover {
+    transform: scale(1.1);
+}
+
+/* Обновляем стили для галереи */
+.gallery-swiper .swiper-slide {
+    aspect-ratio: 1/1;
+} 
